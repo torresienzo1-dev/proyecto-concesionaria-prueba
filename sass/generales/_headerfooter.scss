@@ -1,0 +1,152 @@
+// HEADER
+
+@use "./variables";
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar {
+  .nav-link {
+    color: variables.$color-beige;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: variables.$color-naranja;
+    }
+
+    &.active {
+      color: variables.$color-naranja;
+      font-weight: bold;
+    }
+  }
+}
+
+.nav-item {
+  .nav-link {
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+}
+
+//FOOTER
+
+footer.footer {
+  // Fondo y color general 
+  &.bg-dark {
+    background-color: #020411;
+  }
+
+  &.text-light {
+    color: #ecece7;
+  }
+
+  border-top: variables.$color-naranja solid 4px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+
+  // TÍTULOS (Enlaces / Seguinos)
+  
+  .footer-links h3,
+  .footer-contacto h3 {
+    font-size: 18px;
+    color: variables.$color-naranja;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  // LOGO + DESCRIPCIÓN
+ 
+  .footer-logo {
+    text-align: center;
+
+    img {
+      max-width: 220px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      max-width: 300px;
+      font-size: 1rem;
+      color: #ecece7;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  // ENLACES
+
+  .footer-links {
+    text-align: center;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+    }
+
+    li {
+      list-style: none;
+      margin-bottom: 5px;
+    }
+
+    a {
+      color: #ecece7;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: variables.$color-naranja;
+      }
+    }
+  }
+
+  // CONTACTO + REDES
+
+  .footer-contacto {
+    text-align: center;
+
+    @media (min-width: 768px) {
+      text-align: start;
+    }
+
+    .iconos-redes-sociales {
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 20px;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    p {
+      margin: 5px 0;
+    }
+  }
+
+  // COPY 
+
+  .footer-copy {
+    text-align: center;
+    border-top: #727271 solid 0.3px;
+    padding: 15px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-top: 20px;
+  }
+  
+  // ESPACIADO ENTRE COLUMNAS
+  
+  .col-md-4 {
+    margin-bottom: 30px;
+  }
+}
+
+

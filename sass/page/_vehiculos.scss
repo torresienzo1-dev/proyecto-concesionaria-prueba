@@ -1,0 +1,79 @@
+@use "../generales/variables";
+
+// Títulos principales
+main {
+  h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 60px;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 70px;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+// Lista de vehículos
+.lista-vehiculos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    background-color: #ecece7;
+    filter: drop-shadow(2px 1px 2px rgba(177, 175, 175, 0.6));
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // corregido
+    padding: 20px;
+    max-width: 300px;
+    width: 260px;
+    text-align: center;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    img {
+      width: 100%;
+      height: auto;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    button {
+      padding: 5px;
+      background-color: variables.$color-naranja;
+      border-radius: 5px;
+      filter: drop-shadow(4px 3px 4px rgba(43, 42, 42, 0.6));
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken(variables.$color-naranja, 10%);
+      }
+    }
+  }
+}
+
+// Consulta final
+.consulta-h2 {
+  padding: 10px;
+  margin-top: 60px;
+
+  h2 {
+    text-align: center;
+    color: variables.$color-naranja;
+  }
+}

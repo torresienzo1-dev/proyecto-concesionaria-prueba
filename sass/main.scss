@@ -1,0 +1,12 @@
+
+@use "./generales/variables";
+@use "./generales/reset";
+@use "./generales/headerfooter";
+
+@use "./page/index";
+@use "./page/vehiculos";
+@use "./page/financiacion";
+@use "./page/contacto";
+@use "./page/quienes-somos"; 
+
+// falta agregar media queries 

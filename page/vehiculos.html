@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Market</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/sass.css">
+</head>
+
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-1 px-4">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html" >
+                    <img src="../img/logo-de-la-empresa.png" alt="logo-de-la-empresa" width="200" class="d-inline-block align-text-top">
+                </a>
+
+                <!-- botón hamburguesa-->
+                <button class="navbar-toggler" type="button"    data-bs-toggle="collapse" data-bs-target="#menuHeader">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!--Menú-->
+                <div class="collapse navbar-collapse" id="menuHeader">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="../index.html">Principal</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="#">Vehículos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../page/financiacion.html">Financiación</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../page/contacto.html">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../page/quienes-somos.html">¿Quiénes somos?</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Selecciona tu próximo 0km</h1>
+        <h2>Contamos con una amplia gama de vehículos para satisfacer todas tus necesidades</h2>
+        <ul class="lista-vehiculos">
+            <li>Peugeot 208
+                <img src="../img/vehiculos/peugeot-208.png" alt="Peugeot 208">
+                <h3> Peugeot 208</h3>
+                <p>Precio $29.900.000</p>
+                <button>Ver más</button>
+            </li>
+            <li>Chevrolet Cruze
+                <img src="../img/vehiculos/chevrolet-cruze.png" alt="chevrolet cruze">
+                <h3>Chevrolet Cruze</h3>
+                <p>Precio $40.750.000</p>
+                <button>Ver más</button>
+            </li>
+            <li>Volskagen Polo
+                <img src="../img/vehiculos/Volskwagen-polo.png" alt="Volskwagenpolo">
+                <h3>Volskagen Polo</h3>
+                <p>Precio $32.000.000</p>
+                <button>Ver más</button>
+                </li>
+            <li>Honda Civic
+                <img src="../img/vehiculos/honda-civic.png" alt="Honda Civic">
+                <h3>Honda Civic</h3>
+                <p>Precio $42.250.000</p>
+                <button>Ver más</button>
+            </li>
+            <li>Nissan Sentra
+                <img src="../img/vehiculos/nissan-sentra.png" alt="nissansentra">
+                <h3> Nissan Sentra</h3>
+                <p>Precio $45.700.000</p>
+                <button>Ver más</button>
+            </li>
+            <li>Volskagen Amarok
+                <img src="../img/vehiculos/Volskwagen-amarok.png" alt="Volskwagenamarok">
+                <h3>Volskwagen Amarok</h3>
+                <p>Precio $65.700.000</p>
+                <button>Ver más</button>
+            </li>
+            <li>Fiat Cronos
+                <img src="../img/vehiculos/fiat-cronos.png" alt="fiatcronos">
+                <h3>Fiat Cronos</h3>
+                <p>Precio $31.000.000</p>
+                <button>Ver más</button>
+            </li>
+            <li>Fiat Toro
+                <img src="../img/vehiculos/fiat-toro.png" alt="Fiat Toro">
+                <h3>Fiat Toro</h3>
+                <p>Precio $46.100.000</p>
+                <button>Ver más</button>
+            </li>
+            <li>Ford Territory
+                <img src="../img/vehiculos/ford-territory.png" alt="ford territory">
+                <h3>Ford Territory</h3>
+                <p>Precio $56.200.000</p>
+                <button>Ver más</button>
+            </li>
+            <li>Volskagen Taos
+                <img src="../img/vehiculos/Volskwagen-taos.png" alt="Volskwagen-taos">
+                <h3>Volskwagen Taos</h3>
+                <p>Precio $52.000.000</p>
+                <button>Ver más</button>
+            </li>
+            <li>Toyota Corolla
+                <img src="../img/vehiculos/toyota-corolla.png" alt="">
+                <h3>Toyota Corolla</h3>
+                <p>Precio $50.500.000</p>
+                <button>Ver más</button>
+            </li>
+            <li>Toyota Hilux
+                <img src="../img/vehiculos/toyota-hilux.png" alt="toyota hilux">
+                <h3>toyota Hilux</h3>
+                <p>Precio $66.000.000</p>
+                <button>Ver más</button>
+            </li>
+        </ul>   
+    </main>
+
+    <footer class="footer bg-dark text-light pt-5 pb-3 mt-5">
+        <div class="container mb-4" > 
+            <div class="row justify-content-around"> 
+
+                <!-- LOGO + INFO-->
+                <div class="col-md-4 mb-4 text-center footer-logo">
+                    <img src="../img/logo-de-la-empresa.png" alt="logo de la empresa" class="img-fluid mb-3">
+                    <p>Tu concesionara de confianza para encontrar tu auto ideal</p>
+                </div>
+
+                <!-- ENCLACES-->
+                <div class="col-md-4 mb-4 text-center footer-links">
+                    <h3>Enlaces</h3>
+                    <ul> 
+                        <li><a href="../index.html">Principal</a></li>
+                        <li><a href="#">Vehículos</a></li>
+                        <li><a href="../page/financiacion.html">Financiación</a></li>
+                        <li><a href="../page/contacto.html">Contacto</a></li>
+                        <li><a href="../page/quienes-somos.html">¿Quiénes somos?</a></li>
+                    </ul>
+                </div>
+
+                <!-- CONTACTO-->
+                <div class="col-md-4 mb-4 text-center text-md-start footer-contacto"> 
+                    <h3>Seguinos</h3>
+                    <div class="d-flex justify-content-center justify-content-md-start gap-3 mt-3">
+                        <img class="iconos-redes-sociales" src="../img/logotipo-de-instagram.png" alt="icono y enlace de Instagram">
+                        <img class="iconos-redes-sociales" src="../img/logotipo-de-facebook.png" alt="icono y enlace de Facebook">
+                        <img class="iconos-redes-sociales" src="../img/logo-de-youtube.png" alt=" icono y enlace de Youtube">
+                    </div>
+                    <p>📍 Córdoba, Argentina</p>
+                    <p>📞 +54 351 123 4567</p>
+                </div>   
+            </div>
+        </div>
+
+        <div class="footer-copy">
+            <p>© 2026 AutoMarket. Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
