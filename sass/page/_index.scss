@@ -80,7 +80,7 @@
 // Top vendidos
 .top-vendidos {
   h2 {
-    padding: 5px;
+    padding: 10px;
     margin-top: 80px;
     text-align: center;
   }
@@ -114,7 +114,14 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+      transition: transform 0.2s ease;
+    }
 
+
+  
     button {
       padding: 5px;
       background-color: variables.$color-naranja;
