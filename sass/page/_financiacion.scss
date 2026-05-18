@@ -11,13 +11,17 @@ main {
   }
 }
 .formas-de-pago {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 100px;
-
+    display: grid;
+    grid-template-columns: 1fr; // una sola columna
+    grid-template-rows: repeat(4, auto); // cuatro filas automáticas
+    gap: 20px; // espacio entre cada fila
+    justify-items: center; // centra horizontalmente los íconos y textos
+    align-items: center; // centra verticalmente cada bloque
+    align-content: start;
+   
     img {
-        width: 300px;
-        padding: 30px;
+        width: 350px;
+        padding: 50px 200px 30px 50px;
         background-color: #ecece7;
         border-radius: 10%;
         filter: drop-shadow(2px 1px 2px rgba(177, 175, 175, 0.6));
@@ -37,4 +41,5 @@ main {
     background-color: variables.$color-naranja;
     color: variables.$color-beige;
     font-weight:bold
+  
 }

@@ -1,7 +1,13 @@
 // HEADER
 
 @use "./variables";
-
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden;
+}
 header {
   position: fixed;
   top: 0;
@@ -36,20 +42,20 @@ header {
 
 //FOOTER
 
-footer.footer {
-  // Fondo y color general 
-  &.bg-dark {
-    background-color: #020411;
-  }
-
-  &.text-light {
-    color: #ecece7;
-  }
-
+footer.footer.bg-dark.text-light {
+  width: 100%; 
+  color: #ecece7 !important;
   border-top: variables.$color-naranja solid 4px;
-  padding-top: 40px;
-  padding-bottom: 20px;
+  padding: 40px 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
 
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
   // TÍTULOS (Enlaces / Seguinos)
   
   .footer-links h3,
