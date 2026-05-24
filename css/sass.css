@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
@@ -49,6 +50,7 @@ footer.footer.bg-dark.text-light {
   padding: 40px 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  margin-top: 150px !important;
 }
 footer.footer.bg-dark.text-light .container {
   max-width: 1200px;
@@ -130,46 +132,77 @@ footer.footer.bg-dark.text-light .col-md-4 {
 }
 
 .banner {
+  position: relative;
   width: 100%;
+  height: 80vh;
+  overflow: hidden;
 }
-
 .banner-contenedor {
   position: relative;
-  text-align: center;
+  width: 100%;
+  height: 100%;
 }
 .banner-contenedor img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
-.banner-contenedor .titulo-banner {
+
+.titulo-banner {
   position: absolute;
-  top: 20%;
+  top: 25%;
   left: 50%;
   transform: translateX(-50%);
-  color: white;
-  font-size: 48px;
-  font-weight: bold;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  animation: aparecer 1.2s ease-out forwards;
+  transition: transform 0.4s ease;
 }
-.banner-contenedor form {
+.titulo-banner:hover {
+  transform: scale(1.08);
+  text-shadow: 0 0 25px rgb(255, 255, 255);
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+.buscador-index {
   position: absolute;
   bottom: 20%;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 10px 15px;
   border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: auto;
+  max-width: 600px;
 }
-.banner-contenedor form input {
-  padding: 10px;
+.buscador-index input {
+  flex: 1;
+  min-width: 200px;
+  padding: 15px 30px;
   border: none;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 16px;
 }
-.banner-contenedor form button {
+.buscador-index button {
   background-color: #FF8040;
   color: white;
   padding: 10px 20px;
@@ -179,8 +212,38 @@ footer.footer.bg-dark.text-light .col-md-4 {
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
-.banner-contenedor form button:hover {
+.buscador-index button:hover {
   background-color: rgb(255, 94.0890052356, 13);
+}
+.buscador-index {
+  /*  Tablet */
+}
+@media (max-width: 768px) {
+  .buscador-index {
+    bottom: 15%;
+    padding: 10px;
+    align-items: center;
+  }
+  .buscador-index input {
+    padding: 15px 25px;
+  }
+  .buscador-index button {
+    padding: 10px 15px;
+  }
+}
+.buscador-index {
+  /*  Móvil */
+}
+@media (max-width: 480px) {
+  .buscador-index {
+    flex-direction: column;
+    align-items: stretch;
+    bottom: 10%;
+  }
+  .buscador-index input,
+  .buscador-index button {
+    width: 100%;
+  }
 }
 
 .descripcion {
@@ -202,9 +265,12 @@ footer.footer.bg-dark.text-light .col-md-4 {
 }
 
 .top-vendidos h2 {
-  padding: 10px;
-  margin-top: 80px;
-  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  position: relative;
+  margin: 150px 0 70px;
 }
 
 .lista-vendidos {
@@ -235,6 +301,7 @@ footer.footer.bg-dark.text-light .col-md-4 {
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 .lista-vendidos li:hover {
   transform: scale(1.1);
@@ -250,11 +317,6 @@ footer.footer.bg-dark.text-light .col-md-4 {
   width: 100px;
   margin: auto;
   cursor: pointer;
-}
-
-.consulta-h2 {
-  text-align: center;
-  margin: 40px 0;
 }
 
 .lider-de-ventas {
@@ -324,6 +386,7 @@ main p {
   flex-direction: column;
   gap: 10px;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 .lista-vehiculos li:hover {
   transform: scale(1.1);
