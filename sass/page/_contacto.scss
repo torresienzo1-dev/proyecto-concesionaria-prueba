@@ -1,86 +1,50 @@
 @use "../generales/variables";
 
+.contacto-final {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 50px;
+  background-color: #f7f9fc;
+  margin-top: 90px;
 
-
-.contacto {
-  background-color: #f7f7f7;
-  padding: 50px 0;
-  text-align: center;
-
-  h2 {
-    font-size: 2rem;
+  h2, h3 {
+    color: #0a1a33;
     font-weight: bold;
-    margin-bottom: 40px;
-    border-bottom: 2px solid variables.$color-naranja;
-    display: inline-block;
-    padding-bottom: 5px;
+    margin-bottom: 15px;
   }
 
-  .contenedor-contacto {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-    flex-wrap: wrap;
-    margin-bottom: 50px;
-  }
-
-  .medios-de-contacto {
-    background-color: variables.$color-gris;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    margin-top: 20px;
-
-    ul {
-      list-style: none;
-      padding: 0;
-
-      li {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        margin-bottom: 25px;
-
-        img {
-          width: 40px;
-          transition: transform 0.2s ease;
-          cursor: pointer;
-
-          &:hover {
-            transform: scale(1.1);
-          }
-        }
-
-        span {
-          font-size: 1.1rem;
-          color: #333;
-        }
-      }
-    }
-  }
-
-  .formulario-contacto {
+  .columna {
+    flex: 1;
+    min-width: 280px;
     background-color: #fff;
-    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 500px;
-    margin-top: 20px;
+    padding: 25px;
+  }
+
+  .centro {
+    flex: 1.2;
+    min-width: 320px;
 
     form {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
       gap: 15px;
-      justify-content: center;
 
-      input {
-        flex: 1 1 45%;
+      input, textarea {
         padding: 10px;
         border: 1px solid #ccc;
         border-radius: 5px;
-        }
+        font-size: 1rem;
+      }
+
+      textarea {
+        height: 100px;
+        resize: none;
+      }
 
       button {
         background-color: variables.$color-naranja;
@@ -88,8 +52,8 @@
         border: none;
         border-radius: 5px;
         padding: 10px 20px;
-        cursor: pointer;
         font-weight: bold;
+        cursor: pointer;
         transition: background-color 0.3s ease;
 
         &:hover {
@@ -98,85 +62,115 @@
       }
     }
   }
-}
 
-textarea {
-  flex: 1 1 90%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  height: 100px; // 🔹 más alto para escribir cómodamente
-  resize: none;  // 🔹 evita que el usuario cambie el tamaño manualmente
-}
+  .medios ul,
+  .recursos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
-
-.contacto-final {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 50px;
-  padding: 50px 0;
-  background-color: #f7f7f7;
-  flex-wrap: wrap; // 🔹 para que se adapte en móvil
-
-  .ubicacion {
-    text-align: center;
-
-    h2 {
-      font-size: 1.8rem;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-
-    iframe {
-      width: 600px;
-      height: 350px;
-      border: none;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-  }
-
-  .redes {
-    text-align: center;
-
-    h2 {
-      font-size: 1.8rem;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-
-    .iconos-redes {
+    li {
       display: flex;
-      justify-content: center;
       align-items: center;
-      gap: 25px;
+      gap: 10px;
+      margin-bottom: 10px;
 
       img {
-        width: 50px;
-        height: 50px;
-        transition: transform 0.2s ease;
-        cursor: pointer;
-
-        &:hover {
-          transform: scale(1.1);
-        }
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+        flex-shrink: 0;
       }
     }
   }
 
+  .iconos-redes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.2s ease;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  iframe {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 20px;
+  }
+
+  .opiniones p {
+    margin: 10px 0;
+    font-size: 0.95rem;
+    color: #333;
+
+    strong {
+      color: #0a1a33;
+    }
+  }
+
+  // 🔹 Tablet
+  @media (max-width: 1024px) {
+    gap: 20px;
+    padding: 30px;
+
+    .columna {
+      flex: 1 1 45%;
+    }
+
+    .centro {
+      flex: 1 1 100%;
+    }
+
+    iframe {
+      height: 220px;
+    }
+  }
+
+  // 🔹 Móvil
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
+    padding: 20px;
 
-    .ubicacion iframe {
+    .columna {
       width: 90%;
-      height: 300px;
+      margin-bottom: 20px;
+    }
+
+    iframe {
+      height: 200px;
     }
 
     .iconos-redes img {
-      width: 45px;
-      height: 45px;
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  // 🔹 Extra pequeño (teléfonos chicos)
+  @media (max-width: 480px) {
+    h2, h3 {
+      font-size: 1.2rem;
+    }
+
+    input, textarea {
+      font-size: 0.9rem;
+    }
+
+    button {
+      width: 100%;
     }
   }
 }
+
