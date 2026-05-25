@@ -164,7 +164,7 @@ margin: 20px;
 
   img {
     padding: 10px;
-    background-color: #ecece7;
+    background-color:variables.$color-gris;
     max-width: 100%;
     height: auto;
     border-radius: 10px;
@@ -172,7 +172,7 @@ margin: 20px;
   }
 
   li {
-    background-color: #ecece7;
+    background-color: variables.$color-gris;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -211,7 +211,7 @@ margin: 20px;
   text-align: center;
   padding: 60px 40px;
   margin-top: 30px;
-  background-color: #ecece7;
+  background-color: variables.$color-gris;
   border-top: 2px solid variables.$color-naranja;
 
 
@@ -235,8 +235,10 @@ margin: 20px;
   .texto-index {
     max-width: 900px;
     margin: 0 auto;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 1.6;
     color: #444;
+    
+  
   }
 }

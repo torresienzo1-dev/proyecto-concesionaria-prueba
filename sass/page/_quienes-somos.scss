@@ -13,3 +13,32 @@
     margin: auto;
   }
 }
+
+.foto-concesionaria {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+}
+
+.presentacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh; // 🔹 menos altura
+  margin-top: 40px;
+  text-align: center;
+  background-color: variables.$color-gris;
+  border-top: 2px solid variables.$color-naranja;
+  border-bottom: 2px solid variables.$color-naranja;
+
+  p { 
+    margin: 20px;
+    text-align: center;
+    
+  }
+  h1 {
+    margin: 15px !important; 
+  }
+}
