@@ -1,6 +1,14 @@
+@use "./variables";
+
+main {
+  padding-top: 70px; // ajustá según la altura real del header
+}
+
+
+
 // HEADER
 
-@use "./variables";
+
 html, body {
   margin: 0;
   padding: 0;

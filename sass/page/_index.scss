@@ -63,7 +63,7 @@
   background-color: rgba(255, 255, 255, 0.8);
   padding: 10px 15px;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  filter: drop-shadow(2px 1px 2px rgba(177, 175, 175, 0.6));
   width: auto;
   max-width: 600px;
 
@@ -175,7 +175,7 @@ margin: 20px;
     background-color: variables.$color-gris;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    filter: drop-shadow(2px 1px 2px rgba(177, 175, 175, 0.6));
     width: 350px;
     text-align: center;
     display: flex;
