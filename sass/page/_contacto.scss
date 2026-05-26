@@ -2,13 +2,13 @@
 
 .contacto-final {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly; // centra todo el bloque
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 30px;
   padding: 50px;
   background-color: #f7f9fc;
-  margin-top: 90px;
+  margin-top: 50px;
 
   h2, h3 {
     color: #0a1a33;
@@ -16,19 +16,83 @@
     margin-bottom: 15px;
   }
 
-  .columna {
-    flex: 1;
-    min-width: 280px;
-    background-color: #fff;
+  // 🔹 Columna base
+  .columna-izquierda,
+  .columna-centro,
+  .columna-derecha {
+    background-color: variables.$color-gris;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 25px;
+    flex: 1 1 30%; // cada columna ocupa aprox. 1/3 del ancho
+    max-width: 400px; // evita que se estiren demasiado
   }
 
-  .centro {
-    flex: 1.2;
-    min-width: 320px;
+  // 🔹 Columna izquierda
+  .recursos{
+    li {
+      cursor: pointer;
+      transition: color 0.3s ease;
 
+      &:hover {
+        color: variables.$color-naranja;
+      }
+    }
+  }
+
+  .columna-izquierda {
+    .medios, .recursos, .redes {
+      margin-bottom: 30px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+
+        img {
+          width: 40px;
+          height: 40px;
+          object-fit: contain;
+          transition: transform 0.2s ease;
+          cursor: pointer;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+
+    .iconos-redes {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+
+      img {
+        width: 40px;
+        height: 40px;
+        transition: transform 0.2s ease;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  // 🔹 Columna centro (formulario)
+  .columna-centro {
+    h2{
+      margin-bottom: 50px;
+    }
     form {
       display: flex;
       flex-direction: column;
@@ -63,73 +127,56 @@
     }
   }
 
-  .medios ul,
-  .recursos ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  // 🔹 Columna derecha (mapa y comentarios)
+  .columna-derecha {
+    h3 {
+      margin-bottom: 30px;
+    }
 
-    li {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 10px;
+    iframe {
+      width: 100%;
+      height: 250px;
+      border-radius: 10px;
+      border: none;
+      margin-bottom: 30px;
+    }
 
-      img {
-        width: 40px;
-        height: 40px;
-        object-fit: contain;
-        flex-shrink: 0;
+    .opiniones {
+      p {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        font-size: 0.95rem;
+        color: #333;
+
+      strong {
+        color: #0a1a33;
       }
     }
-  }
 
-  .iconos-redes {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-
-    img {
-      width: 40px;
-      height: 40px;
-      transition: transform 0.2s ease;
-      cursor: pointer;
-
-      &:hover {
-        transform: scale(1.1);
+    .foto-perfil {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%; // 🔹 hace la imagen circular
+        object-fit: cover;
+        border: 2px solid #f36c21; // 🔹 borde naranja para destacar
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       }
-    }
-  }
-
-  iframe {
-    width: 100%;
-    height: 250px;
-    border-radius: 10px;
-    border: none;
-    margin-bottom: 20px;
-  }
-
-  .opiniones p {
-    margin: 10px 0;
-    font-size: 0.95rem;
-    color: #333;
-
-    strong {
-      color: #0a1a33;
     }
   }
 
   // 🔹 Tablet
   @media (max-width: 1024px) {
+    justify-content: center;
     gap: 20px;
     padding: 30px;
 
-    .columna {
+    .columna-izquierda,
+    .columna-centro,
+    .columna-derecha {
       flex: 1 1 45%;
-    }
-
-    .centro {
-      flex: 1 1 100%;
+      max-width: none;
     }
 
     iframe {
@@ -143,7 +190,9 @@
     align-items: center;
     padding: 20px;
 
-    .columna {
+    .columna-izquierda,
+    .columna-centro,
+    .columna-derecha {
       width: 90%;
       margin-bottom: 20px;
     }
@@ -153,8 +202,8 @@
     }
 
     .iconos-redes img {
-      width: 35px;
-      height: 35px;
+      width: 30px;
+      height: 30px;
     }
   }
 
