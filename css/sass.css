@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
@@ -10,7 +9,7 @@ body {
 }
 
 main {
-  padding-top: 70px;
+  padding-top: 60px;
 }
 
 html, body {
@@ -28,6 +27,11 @@ header {
   width: 100%;
   z-index: 1000;
   margin-top: 0;
+}
+
+.navbar-brand img {
+  display: flex;
+  align-items: center !important;
 }
 
 .navbar .nav-link {
@@ -135,25 +139,27 @@ footer.footer.bg-dark.text-light .col-md-4 {
   margin-bottom: 30px;
 }
 
-.banner {
+.index .banner {
   position: relative;
   width: 100%;
   height: 80vh;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
 }
-.banner-contenedor {
+.index .banner-contenedor {
   position: relative;
   width: 100%;
   height: 100%;
 }
-.banner-contenedor img {
+.index .banner-contenedor img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
-
-.titulo-banner {
+.index .titulo-banner {
   position: absolute;
   top: 25%;
   left: 50%;
@@ -166,11 +172,10 @@ footer.footer.bg-dark.text-light .col-md-4 {
   animation: aparecer 1.2s ease-out forwards;
   transition: transform 0.4s ease;
 }
-.titulo-banner:hover {
+.index .titulo-banner:hover {
   transform: scale(1.08);
   text-shadow: 0 0 25px rgb(255, 255, 255);
 }
-
 @keyframes aparecer {
   from {
     opacity: 0;
@@ -181,7 +186,7 @@ footer.footer.bg-dark.text-light .col-md-4 {
     transform: translate(-50%, -50%);
   }
 }
-.buscador-index {
+.index .buscador-index {
   position: absolute;
   bottom: 20%;
   left: 50%;
@@ -198,7 +203,7 @@ footer.footer.bg-dark.text-light .col-md-4 {
   width: auto;
   max-width: 600px;
 }
-.buscador-index input {
+.index .buscador-index input {
   flex: 1;
   min-width: 200px;
   padding: 15px 30px;
@@ -206,7 +211,7 @@ footer.footer.bg-dark.text-light .col-md-4 {
   border-radius: 5px;
   font-size: 16px;
 }
-.buscador-index button {
+.index .buscador-index button {
   background-color: #FF8040;
   color: white;
   padding: 10px 20px;
@@ -216,59 +221,26 @@ footer.footer.bg-dark.text-light .col-md-4 {
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
-.buscador-index button:hover {
+.index .buscador-index button:hover {
   background-color: rgb(255, 94.0890052356, 13);
 }
-.buscador-index {
-  /*  Tablet */
-}
-@media (max-width: 768px) {
-  .buscador-index {
-    bottom: 15%;
-    padding: 10px;
-    align-items: center;
-  }
-  .buscador-index input {
-    padding: 15px 25px;
-  }
-  .buscador-index button {
-    padding: 10px 15px;
-  }
-}
-.buscador-index {
-  /*  Móvil */
-}
-@media (max-width: 480px) {
-  .buscador-index {
-    flex-direction: column;
-    align-items: stretch;
-    bottom: 10%;
-  }
-  .buscador-index input,
-  .buscador-index button {
-    width: 100%;
-  }
-}
-
-.descripcion {
+.index .descripcion {
   text-align: center;
   padding: 20px;
 }
-.descripcion h2 {
+.index .descripcion h2 {
   margin-top: 40px;
 }
-.descripcion p {
+.index .descripcion p {
   max-width: 800px;
   margin: 50px !important;
   line-height: 1.6;
   padding: 20px;
 }
-
-.texto-index {
+.index .texto-index {
   margin: 20px;
 }
-
-.top-vendidos h2 {
+.index .top-vendidos h2 {
   font-size: 2rem;
   font-weight: 700;
   color: #1a1a1a;
@@ -276,8 +248,7 @@ footer.footer.bg-dark.text-light .col-md-4 {
   position: relative;
   margin: 150px 0 70px;
 }
-
-.lista-vendidos {
+.index .lista-vendidos {
   display: flex;
   justify-content: space-around;
   gap: 30px;
@@ -286,7 +257,7 @@ footer.footer.bg-dark.text-light .col-md-4 {
   padding: 0;
   margin: 0;
 }
-.lista-vendidos img {
+.index .lista-vendidos img {
   padding: 10px;
   background-color: #ecece7;
   max-width: 100%;
@@ -294,7 +265,7 @@ footer.footer.bg-dark.text-light .col-md-4 {
   border-radius: 10px;
   margin-bottom: 10px;
 }
-.lista-vendidos li {
+.index .lista-vendidos li {
   background-color: #ecece7;
   padding: 20px;
   border-radius: 10px;
@@ -307,11 +278,11 @@ footer.footer.bg-dark.text-light .col-md-4 {
   cursor: pointer;
   transition: transform 0.3s ease;
 }
-.lista-vendidos li:hover {
+.index .lista-vendidos li:hover {
   transform: scale(1.1);
   transition: transform 0.2s ease;
 }
-.lista-vendidos li button {
+.index .lista-vendidos li button {
   padding: 5px;
   background-color: #FF8040;
   color: white;
@@ -322,22 +293,21 @@ footer.footer.bg-dark.text-light .col-md-4 {
   margin: auto;
   cursor: pointer;
 }
-
-.lider-de-ventas {
+.index .lider-de-ventas {
   text-align: center;
   padding: 60px 40px;
   margin-top: 30px;
   background-color: #ecece7;
   border-top: 2px solid #FF8040;
 }
-.lider-de-ventas h2 {
+.index .lider-de-ventas h2 {
   font-size: 2rem;
   font-weight: 700;
   color: #1a1a1a;
   margin-bottom: 15px;
   position: relative;
 }
-.lider-de-ventas h2::after {
+.index .lider-de-ventas h2::after {
   content: "";
   display: block;
   width: 80px;
@@ -345,15 +315,55 @@ footer.footer.bg-dark.text-light .col-md-4 {
   background: linear-gradient(to right, #FF8040, #ccc);
   margin: 10px auto 0;
 }
-.lider-de-ventas .texto-index {
+.index .lider-de-ventas .texto-index {
   max-width: 900px;
   margin: 0 auto;
   font-size: 1.2rem;
   line-height: 1.6;
   color: #444;
 }
+@media (max-width: 1024px) {
+  .index {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+  }
+  .index input {
+    padding: 15px 30px;
+    font-size: 1rem;
+  }
+  .index button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .index {
+    bottom: 15%;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+  }
+  .index input {
+    padding: 15px 25px;
+  }
+  .index button {
+    padding: 10px 15px;
+  }
+}
+@media (max-width: 480px) {
+  .index {
+    flex-direction: column;
+    align-items: stretch;
+    bottom: 10%;
+  }
+  .index input,
+  .index button {
+    width: 100%;
+  }
+}
 
-main h1 {
+.vehiculos h1 {
   text-align: center;
   font-size: 1.8rem;
   font-weight: 700;
@@ -361,7 +371,7 @@ main h1 {
   margin-top: 50px;
   position: relative;
 }
-main h1::after {
+.vehiculos h1::after {
   content: "";
   display: block;
   width: 80px;
@@ -369,16 +379,15 @@ main h1::after {
   background: linear-gradient(to right, #FF8040, #ccc);
   margin: 10px auto 0;
 }
-main p {
+.vehiculos p {
   font-size: 1rem;
 }
-main h2 {
+.vehiculos h2 {
   text-align: center;
   font-size: 2.2rem;
   margin-bottom: 90px;
 }
-
-.lista-vehiculos {
+.vehiculos .lista-vehiculos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -387,7 +396,7 @@ main h2 {
   padding: 0;
   margin: 0;
 }
-.lista-vehiculos li {
+.vehiculos .lista-vehiculos li {
   background-color: #ecece7;
   filter: drop-shadow(2px 1px 2px rgba(177, 175, 175, 0.6));
   border-radius: 10px;
@@ -403,17 +412,17 @@ main h2 {
   cursor: pointer;
   transition: transform 0.3s ease;
 }
-.lista-vehiculos li:hover {
+.vehiculos .lista-vehiculos li:hover {
   transform: scale(1.1);
   transition: transform 0.2s ease;
 }
-.lista-vehiculos li img {
+.vehiculos .lista-vehiculos li img {
   width: 100%;
   height: auto;
   padding: 10px;
   box-sizing: border-box;
 }
-.lista-vehiculos li button {
+.vehiculos .lista-vehiculos li button {
   padding: 5px;
   background-color: #FF8040;
   border-radius: 5px;
@@ -423,8 +432,91 @@ main h2 {
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
-.lista-vehiculos li button:hover {
+.vehiculos .lista-vehiculos li button:hover {
   background-color: rgb(255, 94.0890052356, 13);
+}
+@media (max-width: 1024px) {
+  .vehiculos main h1 {
+    font-size: 1.6rem;
+    margin-top: 40px;
+  }
+  .vehiculos main h2 {
+    font-size: 2rem;
+    margin-bottom: 70px;
+  }
+  .vehiculos main p {
+    font-size: 0.95rem;
+  }
+  .vehiculos .lista-vehiculos {
+    gap: 20px;
+  }
+  .vehiculos .lista-vehiculos li {
+    width: 45%;
+    max-width: 280px;
+    padding: 15px;
+  }
+  .vehiculos .lista-vehiculos li img {
+    padding: 8px;
+  }
+  .vehiculos .lista-vehiculos li button {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 768px) {
+  .vehiculos main h1 {
+    font-size: 1.4rem;
+    margin-top: 30px;
+  }
+  .vehiculos main h2 {
+    font-size: 1.8rem;
+    margin-bottom: 50px;
+  }
+  .vehiculos main p {
+    font-size: 0.9rem;
+  }
+  .vehiculos .lista-vehiculos {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+  .vehiculos .lista-vehiculos li {
+    width: 90%;
+    max-width: 320px;
+    padding: 15px;
+  }
+  .vehiculos .lista-vehiculos li img {
+    padding: 6px;
+  }
+  .vehiculos .lista-vehiculos li button {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 480px) {
+  .vehiculos main h1 {
+    font-size: 1.2rem;
+  }
+  .vehiculos main h2 {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+  }
+  .vehiculos main p {
+    font-size: 0.85rem;
+  }
+  .vehiculos .lista-vehiculos {
+    gap: 20px;
+  }
+  .vehiculos .lista-vehiculos li {
+    width: 100%;
+    padding: 10px;
+  }
+  .vehiculos .lista-vehiculos li img {
+    padding: 5px;
+  }
+  .vehiculos .lista-vehiculos li button {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
 }
 
 .financiacion {
@@ -526,6 +618,28 @@ main h2 {
 .financiacion .contacto-financiacion .btn-contacto:hover {
   background-color: rgb(255, 94.0890052356, 13);
 }
+@media (max-width: 1024px) {
+  .financiacion .financiacion {
+    padding: 50px 30px;
+  }
+  .financiacion .opciones-financiacion {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .financiacion .opciones-financiacion .opcion {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+  .financiacion .contacto-financiacion {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .financiacion .contacto-financiacion .texto-contacto {
+    margin-bottom: 15px;
+  }
+}
 @media (max-width: 768px) {
   .financiacion {
     padding: 40px 20px;
@@ -544,6 +658,28 @@ main h2 {
   .financiacion .contacto-financiacion .texto-contacto {
     text-align: center;
     margin-bottom: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .financiacion .financiacion {
+    padding: 30px 15px;
+  }
+  .financiacion .titulo {
+    font-size: 1.5rem;
+  }
+  .financiacion .descripcion {
+    font-size: 0.9rem;
+  }
+  .financiacion .opcion {
+    padding: 20px;
+  }
+  .financiacion .opcion img {
+    width: 50px;
+    height: 50px;
+  }
+  .financiacion .btn-contacto {
+    width: 100%;
+    font-size: 0.9rem;
   }
 }
 
@@ -725,11 +861,11 @@ main h2 {
   }
 }
 
-.video {
+.quienes-somos .video {
   padding: 20px;
   margin: 40px;
 }
-.video iframe {
+.quienes-somos .video iframe {
   width: 100%;
   max-width: 900px;
   height: 500px;
@@ -737,15 +873,13 @@ main h2 {
   display: block;
   margin: auto;
 }
-
-.foto-concesionaria {
+.quienes-somos .foto-concesionaria {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
-
-.presentacion {
+.quienes-somos .presentacion {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -757,12 +891,76 @@ main h2 {
   border-top: 2px solid #FF8040;
   border-bottom: 2px solid #FF8040;
 }
-.presentacion p {
+.quienes-somos .presentacion p {
   margin: 20px;
   text-align: center;
 }
-.presentacion h1 {
+.quienes-somos .presentacion h1 {
   margin: 15px !important;
+}
+@media (max-width: 1024px) {
+  .quienes-somos .quienes-somos .video {
+    padding: 15px;
+    margin: 30px;
+  }
+  .quienes-somos .quienes-somos iframe {
+    max-width: 700px;
+    height: 400px;
+  }
+  .quienes-somos .quienes-somos .presentacion {
+    padding: 30px 20px;
+    min-height: 40vh;
+  }
+  .quienes-somos .quienes-somos p {
+    font-size: 1rem;
+    margin: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .quienes-somos .quienes-somos .video {
+    padding: 10px;
+    margin: 20px;
+  }
+  .quienes-somos .quienes-somos iframe {
+    max-width: 100%;
+    height: 300px;
+  }
+  .quienes-somos .quienes-somos .foto-concesionaria {
+    height: auto;
+  }
+  .quienes-somos .quienes-somos .presentacion {
+    flex-direction: column;
+    padding: 20px;
+    min-height: auto;
+    margin-top: 20px;
+  }
+  .quienes-somos .quienes-somos p {
+    font-size: 0.95rem;
+    margin: 10px;
+  }
+  .quienes-somos .quienes-somos h1 {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 480px) {
+  .quienes-somos .quienes-somos .video {
+    padding: 5px;
+    margin: 10px;
+  }
+  .quienes-somos .quienes-somos iframe {
+    height: 220px;
+    border-radius: 8px;
+  }
+  .quienes-somos .quienes-somos .presentacion {
+    padding: 15px;
+    margin-top: 15px;
+  }
+  .quienes-somos .quienes-somos p {
+    font-size: 0.9rem;
+  }
+  .quienes-somos .quienes-somos h1 {
+    font-size: 1.2rem;
+  }
 }
 
 /*# sourceMappingURL=sass.css.map */

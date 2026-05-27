@@ -1,45 +1,136 @@
 @use "../generales/variables";
 
-.video {
-  padding: 20px;
-  margin: 40px;
+.quienes-somos {
+  .video {
+    padding: 20px;
+    margin: 40px;
 
-  iframe {
+    iframe {
+      width: 100%;
+      max-width: 900px;
+      height: 500px;
+      border-radius: 10px;
+      display: block;
+      margin: auto;
+    }
+  }
+
+  .foto-concesionaria {
     width: 100%;
-    max-width: 900px;
-    height: 500px;
-    border-radius: 10px;
+    height: 100%;
+    object-fit: cover;
     display: block;
-    margin: auto;
   }
-}
 
-.foto-concesionaria {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.presentacion {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 50vh; // 🔹 menos altura
-  margin-top: 40px;
-  text-align: center;
-  background-color: variables.$color-gris;
-  border-top: 2px solid variables.$color-naranja;
-  border-bottom: 2px solid variables.$color-naranja;
-
-  p { 
-    margin: 20px;
+  .presentacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh; 
+    margin-top: 40px;
     text-align: center;
-    
+    background-color: variables.$color-gris;
+    border-top: 2px solid variables.$color-naranja;
+    border-bottom: 2px solid variables.$color-naranja;
+
+    p { 
+      margin: 20px;
+      text-align: center;
+
+    }
+
+    h1 {
+      margin: 15px !important; 
+    }
   }
-  
-  h1 {
-    margin: 15px !important; 
+
+  // Responsivo
+  // Tablet
+  @media (max-width: 1024px) {
+    .quienes-somos {
+      .video {
+        padding: 15px;
+        margin: 30px;
+      }
+
+      iframe {
+        max-width: 700px;
+        height: 400px;
+      }
+
+      .presentacion {
+        padding: 30px 20px;
+        min-height: 40vh;
+      }
+
+      p {
+        font-size: 1rem;
+        margin: 15px;
+      }
+    }
+  }
+
+  // Móvil estándar
+  @media (max-width: 768px) {
+    .quienes-somos {
+      .video {
+        padding: 10px;
+        margin: 20px;
+      }
+
+      iframe {
+        max-width: 100%;
+        height: 300px;
+      }
+
+      .foto-concesionaria {
+        height: auto;
+      }
+
+      .presentacion {
+        flex-direction: column;
+        padding: 20px;
+        min-height: auto;
+        margin-top: 20px;
+      }
+
+      p {
+        font-size: 0.95rem;
+        margin: 10px;
+      }
+
+      h1 {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  // Móvil pequeño
+  @media (max-width: 480px) {
+    .quienes-somos {
+      .video {
+        padding: 5px;
+        margin: 10px;
+      }
+
+      iframe {
+        height: 220px;
+        border-radius: 8px;
+      }
+
+      .presentacion {
+        padding: 15px;
+        margin-top: 15px;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+
+      h1 {
+        font-size: 1.2rem;
+      }
+    }
   }
 }

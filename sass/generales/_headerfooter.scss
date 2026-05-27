@@ -1,13 +1,9 @@
 @use "./variables";
 
 main {
-  padding-top: 70px; // ajustá según la altura real del header
+  padding-top: 60px; 
 }
-
-
-
 // HEADER
-
 
 html, body {
   margin: 0;
@@ -24,7 +20,12 @@ header {
   z-index: 1000;
   margin-top: 0;
 }
-
+.navbar-brand{
+  img {
+    display: flex;
+    align-items: center !important;
+  }
+}
 .navbar {
   .nav-link {
     color: variables.$color-gris;

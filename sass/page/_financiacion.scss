@@ -71,7 +71,7 @@
     }
   }
 
-  // 🔹 Bloque inferior de contacto
+  // Bloque inferior de contacto
   .contacto-financiacion {
     display: flex;
     justify-content: center;
@@ -116,7 +116,35 @@
     }
   }
 
-  // 🔹 Responsivo
+  // Responsivo
+  // Tablet
+  @media (max-width: 1024px) {
+    .financiacion {
+      padding: 50px 30px;
+    }
+
+    .opciones-financiacion {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+
+      .opcion {
+        flex: 1 1 45%; 
+        max-width: 45%;
+      }
+    }
+
+    .contacto-financiacion {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      .texto-contacto {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  // Móvil estándar
   @media (max-width: 768px) {
     padding: 40px 20px;
 
@@ -137,6 +165,33 @@
         text-align: center;
         margin-bottom: 15px;
       }
+    }
+  }
+  // Móvil pequeño
+  @media (max-width: 480px) {
+    .financiacion {
+      padding: 30px 15px;
+    }
+
+    .titulo {
+      font-size: 1.5rem;
+    }
+
+    .descripcion {
+      font-size: 0.9rem;
+    }
+
+    .opcion {
+      padding: 20px;
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    .btn-contacto {
+      width: 100%;
+      font-size: 0.9rem;
     }
   }
 }
