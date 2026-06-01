@@ -13,12 +13,21 @@
   }
 
   .titulo {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: #0a1a33;
     margin-bottom: 15px;
+    
+    &::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(to right, variables.$color-naranja, #ccc);
+      margin: 10px auto 0;
+    }
   }
-
+  
   .descripcion {
     color: #555;
     font-size: 1rem;
