@@ -126,7 +126,16 @@
       margin-bottom: 15px;
       position: relative;
       margin: 150px 0 70px;
-    
+      text-align: center;
+      
+      &::after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 3px;
+        background: linear-gradient(to right, variables.$color-naranja, #ccc);
+        margin: 10px auto 0;
+      }
     }
   }
 

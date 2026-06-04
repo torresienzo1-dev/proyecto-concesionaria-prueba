@@ -9,7 +9,7 @@ body {
 }
 
 main {
-  padding-top: 60px;
+  padding-top: 55px;
 }
 
 html, body {
@@ -247,6 +247,15 @@ footer.footer.bg-dark.text-light .col-md-4 {
   margin-bottom: 15px;
   position: relative;
   margin: 150px 0 70px;
+  text-align: center;
+}
+.index .top-vendidos h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, #FF8040, #ccc);
+  margin: 10px auto 0;
 }
 .index .lista-vendidos {
   display: flex;
